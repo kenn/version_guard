@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = VersionGuard::VERSION
   spec.authors       = ['Kenn Ejima']
   spec.email         = ['kenn.ejima@gmail.com']
-  spec.description   = %q{A gem-like version checker to prevent unsupported versions from processing}
-  spec.summary       = %q{A gem-like version checker to prevent unsupported versions from processing}
+  spec.description   = %q{A gem-style version checker}
+  spec.summary       = %q{A gem-style version checker}
   spec.homepage      = 'https://github.com/kenn/version_guard'
   spec.license       = 'MIT'
 
