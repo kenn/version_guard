@@ -45,7 +45,7 @@ module VersionGuard
       if check
         puts "#{message_base} passed" if @options[:verbose]
       else
-        trace = caller.find{|i| i !~ /version_checker\.rb/ }
+        trace = caller.find{|i| i !~ /version_guard\.rb/ }
         filename, lineno = trace.split(':')[0..1]
         abort "#{message_base} failed - check line #{lineno} in #{filename}"
       end
