@@ -5,7 +5,7 @@
 A gem-style version checker for Ruby.
 
 ```ruby
-VersionGuard.check '2.13.0', '~> 2.2' # => true
+VersionGuard.check '2.13.0', '>= 2.2' # => true
 ```
 
 VersionGuard has two methods: `abort` and `check`. While `abort` terminates the process if the version requirement is not satisfied, `check` just returns true / false so that you can choose what to do with the failed version.
@@ -21,10 +21,10 @@ The ruby process terminates immediately with a warning message if the version is
 
 ## Installation
 
-As usual.
+Add this line to your application's Gemfile:
 
 ```ruby
-require 'version_guard'
+gem 'version_guard'
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ Since VersionGuard uses `Gem::Version` and `Gem::Version::Requirement` internall
 The first argument can be either a version string like `"1.2.3"` or a name that can be converted to the constant that holds the version string. For most gems, it should be something like `GemName::VERSION`.
 
 ```ruby
-# As a generic version comparator
+# As a simple version comparator
 VersionGuard.check '2.13.0', '~> 2.2'
 
 # For mobile app backend
